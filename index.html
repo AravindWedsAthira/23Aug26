@@ -24,7 +24,11 @@
         }
         body { font-family: var(--font-body); background-color: var(--ivory); color: #1d2b24; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Music Float */
+        /* Language Toggle Button Top Right */
+        .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; background: rgba(250, 246, 240, 0.85); color: var(--green-dark); padding: 8px 14px; border-radius: 20px; text-decoration: none; border: 1px solid var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; }
+        .lang-switch:hover { background: var(--green); color: var(--ivory); }
+
+        /* Music Float Bottom Right */
         .music-control { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--green); color: var(--ivory); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 1px solid var(--gold); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         
         /* Cinematic Doors */
@@ -48,12 +52,12 @@
         .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
         .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center 15% / cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 25px; position: relative; }
         
-        /* More Transparent Box & Adjusted Padding for Single Line Name */
+        /* More Transparent Box */
         .hero-content-box { 
             padding: 22px 10px; 
             width: 88%; 
             max-width: 340px; 
-            background: rgba(250, 246, 240, 0.65); /* Increased transparency */
+            background: rgba(250, 246, 240, 0.65); 
             backdrop-filter: blur(4px); 
             -webkit-backdrop-filter: blur(4px); 
             margin-bottom: auto; 
@@ -65,13 +69,11 @@
             text-align: center;
         }
         .hero-label { font-size: 10px; letter-spacing: 3px; color: var(--green); font-weight: 700; display: block; margin-bottom: 12px; text-transform: uppercase; }
-        
-        /* Kept Names on the Same Line */
         .hero-names { font-family: var(--font-serif); font-size: 20px; letter-spacing: 0.5px; margin-bottom: 12px; color: var(--green-dark); font-weight: 800; white-space: nowrap; }
         .hero-date { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); font-weight: 700; margin-bottom: 4px; display: block; }
         .hero-location { font-size: 11px; letter-spacing: 1.5px; color: #4a5d53; text-transform: uppercase; font-weight: 600; }
         
-        /* Lifted Grey Scroll Indicator */
+        /* Scroll Indicator */
         .scroll-indicator { animation: bounce 2s infinite; margin-bottom: 90px; text-align: center; z-index: 5; }
         .scroll-indicator p { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #e0e0e0; text-shadow: 0 2px 8px rgba(0,0,0,0.8); font-weight: 700; margin-bottom: 6px; }
         .scroll-indicator span { color: #cccccc; font-size: 18px; display: block; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
@@ -127,7 +129,10 @@
 </head>
 <body>
 
-    <!-- Option 3: Stable, Soothing Divine Flute Track -->
+    <!-- Language Changer Link (Points to ml.html) -->
+    <a href="ml.html" class="lang-switch">മലയാളം</a>
+
+    <!-- Stable Music Track -->
     <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
     <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵 Play Music</div>
 
@@ -152,7 +157,6 @@
                 <p class="hero-location">Kadaikkodu, Kerala</p>
             </div>
             
-            <!-- Lifted Grey Scroll Prompt -->
             <div class="scroll-indicator">
                 <p>Scroll Down to View Invitation</p>
                 <span>▼</span>
