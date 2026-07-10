@@ -34,11 +34,11 @@
         .hidden-content { opacity: 0; transition: opacity 1s ease; }
         .visible-content { opacity: 1; }
 
-        /* Sections Layout */
+        /* Hero Layout - Moved Box to the Top */
         .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
-        .hero-section { height: 100vh; background: linear-gradient(rgba(11,60,38,0.75), rgba(5,34,20,0.85)), url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; color: var(--ivory); }
-        .hero-content-box { border: 1px solid rgba(212, 175, 55, 0.4); padding: 40px 20px; background: rgba(5, 34, 20, 0.4); backdrop-filter: blur(2px); }
-        .hero-names { font-family: var(--font-serif); font-size: 32px; letter-spacing: 2px; margin-bottom: 10px; }
+        .hero-section { height: 100vh; background: linear-gradient(rgba(11,60,38,0.5), rgba(5,34,20,0.65)), url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: flex-start; padding-top: 40px; color: var(--ivory); }
+        .hero-content-box { border: 1px solid rgba(212, 175, 55, 0.5); padding: 30px 20px; width: 90%; max-width: 360px; background: rgba(5, 34, 20, 0.65); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .hero-names { font-family: var(--font-serif); font-size: 28px; letter-spacing: 2px; margin-bottom: 10px; }
         .hero-date { font-family: var(--font-script); font-size: 22px; color: var(--gold); }
         
         /* Countdown */
@@ -86,8 +86,8 @@
 </head>
 <body>
 
-    <!-- Light Background Jingle Track -->
-    <audio id="bg-music" loop><source src="https://assets.mixkit.co/music/preview/mixkit-greetings-1428.mp3" type="audio/mpeg"></audio>
+    <!-- Light Instrumental Flute Melody -->
+    <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
     <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵 Play Music</div>
 
     <!-- Temple Gate Overlay -->
@@ -140,7 +140,7 @@
                             <h4>The Holy Muhurtham</h4>
                             <p class="time">Sunday, 23 August 2026<br>12:05 PM - 12:30 PM</p>
                             <p style="font-size:13px; margin-bottom: 5px;">Kadaikkodu Sree Mahadeva Temple</p>
-                            <a href="https://maps.app.goo.gl/xDfUhz1Yk4icUcdA" target="_blank" class="maps-btn">📍 View Map</a>
+                            <a href="https://maps.app.goo.gl/2FMVcja4yV4bjoE78" target="_blank" class="maps-btn">📍 View Map</a>
                         </div>
                     </div>
                     <div class="event-card">
