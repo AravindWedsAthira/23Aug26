@@ -48,26 +48,26 @@
         .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
         .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center 15% / cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 25px; position: relative; }
         
-        /* Adjusted Size & Placed Higher to Prevent Covering Faces */
+        /* More Transparent Box & Adjusted Padding for Single Line Name */
         .hero-content-box { 
-            padding: 20px 15px; 
-            width: 82%; 
-            max-width: 310px; 
-            background: rgba(250, 246, 240, 0.85); 
-            backdrop-filter: blur(6px); 
-            -webkit-backdrop-filter: blur(6px); 
+            padding: 22px 10px; 
+            width: 88%; 
+            max-width: 340px; 
+            background: rgba(250, 246, 240, 0.65); /* Increased transparency */
+            backdrop-filter: blur(4px); 
+            -webkit-backdrop-filter: blur(4px); 
             margin-bottom: auto; 
             border-radius: 2px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
             outline: 1px solid var(--gold);
             outline-offset: -5px;
-            border: 1px solid rgba(212, 175, 55, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             text-align: center;
         }
-        .hero-label { font-size: 10px; letter-spacing: 3px; color: var(--green); font-weight: 700; display: block; margin-bottom: 10px; text-transform: uppercase; }
+        .hero-label { font-size: 10px; letter-spacing: 3px; color: var(--green); font-weight: 700; display: block; margin-bottom: 12px; text-transform: uppercase; }
         
-        /* Adjusted Text Size */
-        .hero-names { font-family: var(--font-serif); font-size: 24px; letter-spacing: 1px; margin-bottom: 8px; color: var(--green-dark); font-weight: 800; line-height: 1.2; }
+        /* Kept Names on the Same Line */
+        .hero-names { font-family: var(--font-serif); font-size: 20px; letter-spacing: 0.5px; margin-bottom: 12px; color: var(--green-dark); font-weight: 800; white-space: nowrap; }
         .hero-date { font-family: var(--font-script); font-size: 26px; color: var(--gold-dark); font-weight: 700; margin-bottom: 4px; display: block; }
         .hero-location { font-size: 11px; letter-spacing: 1.5px; color: #4a5d53; text-transform: uppercase; font-weight: 600; }
         
@@ -147,7 +147,7 @@
         <header class="hero-section">
             <div class="hero-content-box">
                 <span class="hero-label">Save Our Date</span>
-                <h2 class="hero-names">Aravind<br>&<br>Athira</h2>
+                <h2 class="hero-names">Aravind & Athira</h2>
                 <span class="hero-date">23 . 08 . 2026</span>
                 <p class="hero-location">Kadaikkodu, Kerala</p>
             </div>
