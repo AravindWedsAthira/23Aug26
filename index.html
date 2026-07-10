@@ -15,7 +15,7 @@
         body { font-family: var(--font-body); background-color: var(--ivory); color: #1d2b24; overflow-x: hidden; scroll-behavior: smooth; }
         
         /* Music Float */
-        .music-control { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--green); color: var(--ivory); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 1px solid var(--gold); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+        .music-control { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--green); color: var(--ivory); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 1px solid var(--gold); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         
         /* Cinematic Doors */
         .intro-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: var(--green-dark); display: flex; perspective: 1500px; transition: opacity 1s ease 1.2s; }
@@ -34,16 +34,33 @@
         .hidden-content { opacity: 0; transition: opacity 1s ease; }
         .visible-content { opacity: 1; }
 
-        /* Hero Layout - Green layer removed from background image for full brightness */
+        /* Hero Layout with Redesigned Premium Text Box */
         .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
-        .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 40px; color: var(--ivory); position: relative; }
-        .hero-content-box { border: 1px solid rgba(212, 175, 55, 0.6); padding: 30px 20px; width: 90%; max-width: 360px; background: rgba(5, 34, 20, 0.8); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); margin-bottom: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-        .hero-names { font-family: var(--font-serif); font-size: 28px; letter-spacing: 2px; margin-bottom: 10px; color: var(--ivory); }
-        .hero-date { font-family: var(--font-script); font-size: 22px; color: var(--gold); }
+        .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 35px; position: relative; }
+        
+        /* New Frosted Ivory & Gold Traditional Card Design */
+        .hero-content-box { 
+            padding: 25px 20px; 
+            width: 88%; 
+            max-width: 350px; 
+            background: rgba(250, 246, 240, 0.85); 
+            backdrop-filter: blur(8px); 
+            -webkit-backdrop-filter: blur(8px); 
+            margin-bottom: auto; 
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+            outline: 1px solid var(--gold);
+            outline-offset: -6px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+        }
+        .hero-label { font-size: 10px; letter-spacing: 4px; color: var(--green); font-weight: 600; display: block; margin-bottom: 12px; text-transform: uppercase; }
+        .hero-names { font-family: var(--font-serif); font-size: 24px; letter-spacing: 2px; margin-bottom: 8px; color: var(--green-dark); font-weight: 700; }
+        .hero-date { font-family: var(--font-script); font-size: 24px; color: var(--gold-dark); font-weight: bold; margin-bottom: 4px; }
+        .hero-location { font-size: 11px; letter-spacing: 2px; color: #4a5d53; text-transform: uppercase; font-weight: 500; }
         
         /* Floating Scroll Indicator */
-        .scroll-indicator { animation: bounce 2s infinite; margin-bottom: 40px; text-align: center; }
-        .scroll-indicator p { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ivory); text-shadow: 0 2px 6px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.9); font-weight: 600; margin-bottom: 5px; }
+        .scroll-indicator { animation: bounce 2s infinite; margin-bottom: 35px; text-align: center; }
+        .scroll-indicator p { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ivory); text-shadow: 0 2px 6px rgba(0,0,0,0.9); font-weight: 600; margin-bottom: 5px; }
         .scroll-indicator span { color: var(--gold); font-size: 20px; display: block; text-shadow: 0 2px 6px rgba(0,0,0,0.9); }
 
         @keyframes bounce {
@@ -97,8 +114,8 @@
 </head>
 <body>
 
-    <!-- Calm & Soothing Divine Flute Melody Track -->
-    <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
+    <!-- Traditional Hindu Festive Wedding Instrumental Track -->
+    <audio id="bg-music" loop preload="auto"><source src="https://assets.mixkit.co/music/preview/mixkit-traditional-hindu-wedding-instrumental-theme-604.mp3" type="audio/mpeg"></audio>
     <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵 Play Music</div>
 
     <!-- Temple Gate Overlay -->
@@ -116,10 +133,10 @@
     <div id="main-content" class="hidden-content">
         <header class="hero-section">
             <div class="hero-content-box">
-                <span style="font-size:10px; letter-spacing:3px; color:var(--gold); display:block; margin-bottom:10px;">SAVE OUR DATE</span>
+                <span class="hero-label">Save Our Date</span>
                 <h2 class="hero-names">Aravind & Athira</h2>
                 <p class="hero-date">23 . 08 . 2026</p>
-                <p style="font-size:12px; letter-spacing:1px; margin-top:5px;">Kadaikkodu, Kerala</p>
+                <p class="hero-location">Kadaikkodu, Kerala</p>
             </div>
             
             <!-- Bouncing Scroll Prompt -->
