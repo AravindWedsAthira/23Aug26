@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>അരവിന്ദ് & ആതിര - വിവാഹ ക്ഷണം</title>
+
+    <!-- WhatsApp / Facebook Share Preview Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="അരവിന്ദ് & ആതിര - വിവാഹ ക്ഷണം">
+    <meta property="og:description" content="2026 ഓഗസ്റ്റ് 23-ന് കടയ്ക്കോട് വെച്ച് നടക്കുന്ന ഞങ്ങളുടെ വിവാഹ മംഗളകർമ്മത്തിലേക്ക് നിങ്ങളെ ഏവരെയും സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.">
+    <meta property="og:image" content="https://i.postimg.cc/q70MsQhP/0c1d7699-6039-45ac-bf41-7f90aa624b14-copied-media-2.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="400">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Gayathri:wght@400;700&family=Meera&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --ivory: #faf6f0; --ivory-dark: #f3ede2; --gold: #d4af37; --gold-dark: #aa841c;
+            --green: #0b3c26; --green-dark: #052214; --font-serif: 'Cinzel', serif;
+            --font-malayalam: 'Gayathri', 'Meera', sans-serif;
+        }
+        body { font-family: var(--font-malayalam); background-color: var(--ivory); color: #1d2b24; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* Music Float */
+        .music-control { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--green); color: var(--ivory); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 1px solid var(--gold); font-size: 13px; letter-spacing: 1px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        
+        /* Cinematic Doors */
+        .intro-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: var(--green-dark); display: flex; perspective: 1500px; transition: opacity 1s ease 1.2s; }
+        .door { width: 50%; height: 100%; background: radial-gradient(circle, var(--green) 20%, var(--green-dark) 80%); border: 3px solid var(--gold); transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
+        .left-door { transform-origin: left center; border-right: 1px solid var(--gold); }
+        .right-door { transform-origin: right center; border-left: 1px solid var(--gold); }
+        .intro-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 10; width: 90%; color: var(--ivory); transition: opacity 0.5s ease; }
+        .logo-monogram { font-family: var(--font-serif); font-size: 32px; color: var(--gold); border: 2px solid var(--gold); width: 70px; height: 70px; line-height: 66px; border-radius: 50%; margin: 0 auto 20px; background: rgba(11, 60, 38, 0.6); }
+        .intro-content h1 { font-size: 28px; font-weight: 700; margin-bottom: 10px; color: var(--ivory); }
+        .intro-content .sub-title { font-size: 16px; color: var(--gold); margin-bottom: 25px; }
+        .enter-btn { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 10px 24px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        
+        .open-left { transform: rotateY(-90deg); }
+        .open-right { transform: rotateY(90deg); }
+        .fade-out { opacity: 0; pointer-events: none; }
+        .hidden-content { opacity: 0; transition: opacity 1s ease; }
+        .visible-content { opacity: 1; }
+
+        /* Hero Layout Optimized to Show Faces */
+        .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
+        .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center 15% / cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 25px; position: relative; }
+        
+        /* Transparent Content Box */
+        .hero-content-box { 
+            padding: 20px 10px; 
+            width: 88%; 
+            max-width: 340px; 
+            background: rgba(250, 246, 240, 0.65); 
+            backdrop-filter: blur(4px); 
+            -webkit-backdrop-filter: blur(4px); 
+            margin-bottom: auto; 
+            border-radius: 2px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
+            outline: 1px solid var(--gold);
+            outline-offset: -5px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+        .hero-label { font-size: 13px; font-weight: bold; color: var(--green); display: block; margin-bottom: 10px; }
+        
+        /* Names and Date in Malayalam */
+        .hero-names { font-size: 24px; margin-bottom: 10px; color: var(--green-dark); font-weight: 800; white-space: nowrap; }
+        .hero-date { font-size: 24px; color: var(--gold-dark); font-weight: 700; margin-bottom: 4px; display: block; }
+        .hero-location { font-size: 14px; color: #4a5d53; font-weight: 600; }
+        
+        /* Lifted Scroll Indicator */
+        .scroll-indicator { animation: bounce 2s infinite; margin-bottom: 90px; text-align: center; z-index: 5; }
+        .scroll-indicator p { font-size: 13px; color: #e0e0e0; text-shadow: 0 2px 8px rgba(0,0,0,0.8); font-weight: 700; margin-bottom: 6px; }
+        .scroll-indicator span { color: #cccccc; font-size: 18px; display: block; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
+        }
+        
+        /* Countdown */
+        .countdown-section { padding: 50px 0; background: var(--ivory-dark); }
+        .section-title { font-size: 22px; color: var(--green); font-weight: bold; margin-bottom: 25px; }
+        .countdown-grid { display: flex; justify-content: center; gap: 10px; }
+        .countdown-item { background: var(--green); color: var(--ivory); border: 1px solid var(--gold); padding: 12px; min-width: 75px; border-radius: 4px; }
+        .countdown-item span { font-size: 22px; color: var(--gold); display: block; font-weight: bold; }
+        .countdown-item p { font-size: 11px; }
+
+        /* Invitation Note */
+        .invitation-note { padding: 50px 0; background: var(--ivory); }
+        .malayalam-blessing { font-size: 22px; color: var(--gold-dark); font-weight: bold; margin-bottom: 15px; }
+        .invitation-text { font-size: 16px; line-height: 1.8; padding: 0 15px; font-weight: 500; }
+
+        /* Events */
+        .events-section { padding: 50px 0; background: var(--green-dark); color: var(--ivory); }
+        .events-section .section-title { color: var(--gold); }
+        .events-flex { display: flex; flex-direction: column; gap: 25px; align-items: center; margin-top: 20px; }
+        .event-card { background: var(--green); border: 1px solid var(--gold); padding: 6px; width: 100%; max-width: 360px; }
+        .card-border { border: 1px dashed rgba(212,175,55,0.3); padding: 25px 15px; }
+        .event-card h4 { font-size: 20px; color: var(--gold); margin-bottom: 8px; font-weight: bold; }
+        .event-card .time { color: #f3e5ab; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }
+        .maps-btn { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 8px 14px; text-decoration: none; font-size: 13px; margin-top: 10px; border-radius: 4px; }
+        .maps-btn:hover { background: var(--gold); color: var(--green-dark); }
+
+        /* Photo Gallery */
+        .gallery-section { padding: 50px 0; background: var(--ivory-dark); }
+        .gallery-grid { display: flex; flex-direction: column; gap: 20px; align-items: center; margin-top: 20px; }
+        .gallery-item { width: 90%; max-width: 350px; background: #fff; padding: 8px; border: 1px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .gallery-item img { width: 100%; height: auto; max-height: 450px; object-fit: cover; display: block; }
+
+        /* RSVP */
+        .rsvp-section { padding: 50px 0; background: var(--ivory); }
+        .rsvp-box { border: 1px solid var(--gold); padding: 30px 15px; background: var(--ivory-dark); }
+        .whatsapp-btn { display: inline-block; background: #25d366; color: white; padding: 12px 24px; text-decoration: none; font-size: 14px; border-radius: 30px; margin-top: 15px; font-weight: bold; }
+
+        /* Footer */
+        .premium-footer { background: var(--green-dark); color: var(--ivory); padding: 30px 0; border-top: 2px solid var(--gold); }
+        .hashtag { font-style: italic; color: var(--gold); margin-top: 5px; font-size: 14px; }
+        
+        .scroll-anim { opacity: 0; transform: translateY(15px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .scroll-anim.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="auto/mpeg"></audio>
+    <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵 സംഗീതം കേൾക്കാം</div>
+
+    <!-- Temple Gate Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="door left-door"></div>
+        <div class="door right-door"></div>
+        <div class="intro-content" id="intro-text">
+            <div class="logo-monogram">AA</div>
+            <h1>അരവിന്ദ് & ആതിര</h1>
+            <p class="sub-title">Together Forever</p>
+            <button class="enter-btn" onclick="openDoors()">ക്ഷണക്കത്ത് കാണാം</button>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden-content">
+        <header class="hero-section">
+            <div class="hero-content-box">
+                <span class="hero-label">Save Our Date</span>
+                <h2 class="hero-names">അരവിന്ദ് & ആതിര</h2>
+                <span class="hero-date">23 . 08 . 2026</span>
+                <p class="hero-location">കടയ്ക്കോട്, കേരളം</p>
+            </div>
+            
+            <!-- Scroll Prompt -->
+            <div class="scroll-indicator">
+                <p>താഴേക്ക് സ്ക്രോൾ ചെയ്യുക</p>
+                <span>▼</span>
+            </div>
+        </header>
+
+        <section id="countdown-section" class="countdown-section scroll-anim">
+            <div class="container">
+                <h3 class="section-title">ഇനി ഏതാനും ദിവസങ്ങൾ മാത്രം...</h3>
+                <div class="countdown-grid">
+                    <div class="countdown-item"><span id="days">00</span><p>ദിവസങ്ങൾ</p></div>
+                    <div class="countdown-item"><span id="hours">00</span><p>മണിക്കൂർ</p></div>
+                    <div class="countdown-item"><span id="minutes">00</span><p>മിനിറ്റ്</p></div>
+                    <div class="countdown-item"><span id="seconds">00</span><p>സെക്കൻഡ്</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="invitation-note scroll-anim">
+            <div class="container">
+                <p class="malayalam-blessing">"ഹൃദയപൂർവ്വം സ്വാഗതം"</p>
+                <p class="invitation-text">ഈശ്വരതുല്യരായ മുതിർന്നവരുടെയും ഉറ്റവരുടെയും അനുഗ്രഹത്തോടെ, ഞങ്ങൾ വിവാഹിതരാകുന്നു. ഞങ്ങളുടെ ജീവിതത്തിലെ ഈ സദ്മുഹൂർത്തത്തിന് സാക്ഷ്യം വഹിക്കാൻ നിങ്ങളെ ഏവരെയും സ്നേഹപൂർവ്വം ക്ഷണിച്ചുകൊള്ളുന്നു.</p>
+            </div>
+        </section>
+
+        <section class="events-section scroll-anim">
+            <div class="container">
+                <h3 class="section-title">മംഗള മുഹൂർത്തങ്ങൾ</h3>
+                <div class="events-flex">
+                    <div class="event-card">
+                        <div class="card-border">
+                            <h4>വിവാഹ മുഹൂർത്തം</h4>
+                            <p class="time">ഞായറാഴ്ച, 2026 ഓഗസ്റ്റ് 23<br>ഉച്ചയ്ക്ക് 12:05 - 12:30 നും മധ്യേ</p>
+                            <p style="font-size:14px; margin-bottom: 5px;">കടയ്ക്കോട് ശ്രീ മഹാദേവർ ക്ഷേത്രം</p>
+                            <a href="https://maps.app.goo.gl/2FMVcja4yV4bjoE78" target="_blank" class="maps-btn">📍 ലൊക്കേഷൻ കാണാം</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="card-border">
+                            <h4>വിവാഹ സൽക്കാരം</h4>
+                            <p class="time">തിങ്കളാഴ്ച, 2026 ഓഗസ്റ്റ് 24<br>വൈകുന്നേരം 06:30 മുതൽ 09:30 വരെ</p>
+                            <p style="font-size:14px; margin-bottom: 5px;">ASCO ക്രൗൺ പ്ലാസ, അറക്കുളം</p>
+                            <a href="https://maps.app.goo.gl/tdYxBqTGdYgeVfoG9" target="_blank" class="maps-btn">📍 ലൊക്കേഷൻ കാണാം</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section scroll-anim">
+            <div class="container">
+                <h3 class="section-title">മനോഹര നിമിഷങ്ങൾ</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/q70MsQhP/0c1d7699-6039-45ac-bf41-7f90aa624b14-copied-media-2.jpg" alt="അരവിന്ദ് & ആതിര">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/1Xg9mj2c/d17bc8b2-18bb-4ef7-9820-d6ed72e58fa8-copied-media-2-jpg.avif" alt="ആഘോഷ നിമിഷം">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rsvp-section scroll-anim">
+            <div class="container">
+                <div class="rsvp-box">
+                    <h3 class="section-title" style="margin-bottom:10px;">നിങ്ങളുടെ സാന്നിധ്യം അറിയിക്കാം</h3>
+                    <p style="font-size:14px;">ദയവായി 2026 ഓഗസ്റ്റ് 10-നകം നിങ്ങളുടെ വരവ് സ്ഥിരീകരിക്കുമല്ലോ.</p>
+                    <a href="https://wa.me/917994126681?text=Hi%20Aravind%20%26%20Athira%2C%20I%20will%20be%20attending%20your%20wedding%21" target="_blank" class="whatsapp-btn">💬 വാട്സാപ്പിലൂടെ അറിയിക്കാം</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="premium-footer">
+            <div class="container">
+                <p style="font-size: 16px; font-weight: bold;">അരവിന്ദ് & ആതിര</p>
+                <p class="hashtag">#AthiraFoundHerAravind</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        function toggleMusic() {
+            if (bgMusic.paused) { bgMusic.play(); musicBtn.innerHTML = '⏸️ Pause'; }
+            else { bgMusic.pause(); musicBtn.innerHTML = '🎵 Play Music'; }
+        }
+        function openDoors() {
+            document.getElementById('intro-text').style.opacity = '0';
+            document.querySelector('.left-door').classList.add('open-left');
+            document.querySelector('.right-door').classList.add('open-right');
+            document.getElementById('intro-overlay').classList.add('fade-out');
+            const main = document.getElementById('main-content');
+            main.classList.remove('hidden-content'); main.classList.add('visible-content');
+            bgMusic.play().then(() => { musicBtn.innerHTML = '⏸️ Pause'; }).catch(() => {});
+            handleScrollReveal();
+        }
+        const targetDate = new Date('August 23, 2026 12:05:00').getTime();
+        function updateCountdown() {
+            const difference = targetDate - new Date().getTime();
+            if (difference < 0) return;
+            document.getElementById('days').innerText = String(Math.floor(difference / (1000*60*60*24))).padStart(2,'0');
+            document.getElementById('hours').innerText = String(Math.floor((difference % (1000*60*60*24)) / (1000*60*60))).padStart(2,'0');
+            document.getElementById('minutes').innerText = String(Math.floor((difference % (1000*60*60)) / (1000*60))).padStart(2,'0');
+            document.getElementById('seconds').innerText = String(Math.floor((difference % (1000*60)) / 1000)).padStart(2,'0');
+        }
+        setInterval(updateCountdown, 1000);
+        const animElements = document.querySelectorAll('.scroll-anim');
+        function handleScrollReveal() {
+            animElements.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.85) el.classList.add('active');
+            });
+        }
+        window.addEventListener('scroll', handleScrollReveal);
+    </script>
+</body>
+</html>
+
