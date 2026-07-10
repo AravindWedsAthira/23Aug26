@@ -8,7 +8,7 @@
     <!-- WhatsApp / Facebook Share Preview Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="അരവിന്ദ് & ആതിര - വിവാഹ ക്ഷണം">
-    <meta property="og:description" content="2026 ഓഗസ്റ്റ് 23-ന് കടയ്ക്കോട് വെച്ച് നടക്കുന്ന ഞങ്ങളുടെ വിവാഹ മംഗളകർമ്മത്തിലേക്ക് നിങ്ങളെ ഏവരെയും സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.">
+    <meta property="og:description" content="2026 ഓഗസ്റ്റ് 23-ന് കടയ്ക്കോട് വെച്ച് നടക്കുന്ന ഞങ്ങളുടെ വിവാഹ മംഗളകർമ്മത്തിലേക്ക് നിങ്ങളെ ഏ㶪യും സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.">
     <meta property="og:image" content="https://i.postimg.cc/q70MsQhP/0c1d7699-6039-45ac-bf41-7f90aa624b14-copied-media-2.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="300">
@@ -24,8 +24,12 @@
         }
         body { font-family: var(--font-malayalam); background-color: var(--ivory); color: #1d2b24; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Music Float */
-        .music-control { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--green); color: var(--ivory); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 1px solid var(--gold); font-size: 13px; letter-spacing: 1px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        /* Language Toggle Button Top Right */
+        .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; background: rgba(250, 246, 240, 0.85); color: var(--green-dark); padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid var(--gold); font-size: 13px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; }
+        .lang-switch:hover { background: var(--green); color: var(--ivory); }
+
+        /* Music Float Bottom Right */
+        .music-control { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--green); color: var(--ivory); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 1px solid var(--gold); font-size: 13px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
         
         /* Cinematic Doors */
         .intro-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: var(--green-dark); display: flex; perspective: 1500px; transition: opacity 1s ease 1.2s; }
@@ -44,7 +48,7 @@
         .hidden-content { opacity: 0; transition: opacity 1s ease; }
         .visible-content { opacity: 1; }
 
-        /* Hero Layout Optimized to Show Faces */
+        /* Hero Layout */
         .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
         .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center 15% / cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 25px; position: relative; }
         
@@ -65,13 +69,11 @@
             text-align: center;
         }
         .hero-label { font-size: 13px; font-weight: bold; color: var(--green); display: block; margin-bottom: 10px; }
-        
-        /* Names and Date in Malayalam */
         .hero-names { font-size: 24px; margin-bottom: 10px; color: var(--green-dark); font-weight: 800; white-space: nowrap; }
         .hero-date { font-size: 24px; color: var(--gold-dark); font-weight: 700; margin-bottom: 4px; display: block; }
         .hero-location { font-size: 14px; color: #4a5d53; font-weight: 600; }
         
-        /* Lifted Scroll Indicator */
+        /* Scroll Indicator */
         .scroll-indicator { animation: bounce 2s infinite; margin-bottom: 90px; text-align: center; z-index: 5; }
         .scroll-indicator p { font-size: 13px; color: #e0e0e0; text-shadow: 0 2px 8px rgba(0,0,0,0.8); font-weight: 700; margin-bottom: 6px; }
         .scroll-indicator span { color: #cccccc; font-size: 18px; display: block; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
@@ -127,8 +129,11 @@
 </head>
 <body>
 
+    <!-- Language Changer Link (Points back to index.html) -->
+    <a href="index.html" class="lang-switch">English</a>
+
     <!-- Background Music -->
-    <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="auto/mpeg"></audio>
+    <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
     <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵 സംഗീതം കേൾക്കാം</div>
 
     <!-- Temple Gate Overlay -->
@@ -152,7 +157,6 @@
                 <p class="hero-location">കടയ്ക്കോട്, കേരളം</p>
             </div>
             
-            <!-- Scroll Prompt -->
             <div class="scroll-indicator">
                 <p>താഴേക്ക് സ്ക്രോൾ ചെയ്യുക</p>
                 <span>▼</span>
@@ -271,4 +275,3 @@
     </script>
 </body>
 </html>
-
