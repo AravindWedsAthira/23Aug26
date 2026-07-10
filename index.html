@@ -52,7 +52,7 @@
         .container { width: 90%; max-width: 800px; margin: 0 auto; text-align: center; }
         .hero-section { height: 100vh; background: url('https://i.postimg.cc/76K6Y7Lt/ae0eef2c-28f1-4f30-b6e6-b2dc03606df7-copied-media-2.jpg') center 15% / cover no-repeat; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 25px; position: relative; }
         
-        /* More Transparent Box */
+        /* Transparent Box */
         .hero-content-box { 
             padding: 22px 10px; 
             width: 88%; 
@@ -129,11 +129,13 @@
 </head>
 <body>
 
-    <!-- Language Changer Link (Points to ml.html) -->
+    <!-- Language Changer Link -->
     <a href="ml.html" class="lang-switch">മലയാളം</a>
 
-    <!-- Stable Music Track -->
-    <audio id="bg-music" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg"></audio>
+    <!-- Integrated Custom Background Music Track -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://archive.org/download/mangalyam_202607/mangalyam.mp3" type="audio/mpeg">
+    </audio>
     <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵 Play Music</div>
 
     <!-- Temple Gate Overlay -->
